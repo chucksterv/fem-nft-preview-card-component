@@ -123,6 +123,7 @@ a:hover {
   padding: 1.65rem;
   border-radius: 1rem;
   overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background-color: hsl(216deg, 50%, 16%);
 }
 .card__img {
@@ -207,7 +208,7 @@ a:hover {
 
 hr {
   width: 100%;
-  color: hsl(215deg, 32%, 27%);
+  border-color: hsl(215deg, 32%, 27%);
   margin-top: 0;
 }
 
