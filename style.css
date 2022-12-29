@@ -1,0 +1,268 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/*
+  The following two functions are used to convert pixel values to rem and em values.
+  Only intended to be used in instances where designs call for very specific px values that are non-standard.
+  Please use rem and em values by default where possible without using this as a conversion tool.
+*/
+/*
+  Generates a media query according to either a breakpoint or a numerical unit.
+  Checks the breakpoints map.
+  Checks if the numerical value has a valid unit attached to it.
+  Converts all px values entered to em values.
+*/
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+h1,
+h1 a {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 600;
+  font-size: 1.375rem;
+  text-decoration: none;
+}
+
+body {
+  background-color: hsl(217deg, 54%, 11%);
+  color: hsl(215deg, 51%, 70%);
+  display: grid;
+  place-content: center;
+}
+
+a {
+  text-decoration: none;
+  transition: 250ms color ease-in-out;
+}
+a:hover {
+  color: hsl(178deg, 100%, 50%);
+}
+
+.card {
+  display: grid;
+  row-gap: 1rem;
+  width: min(100% - 3rem, 21.875em);
+  margin: 2rem auto;
+  padding: 1.65rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: hsl(216deg, 50%, 16%);
+}
+.card__img {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-inline: auto;
+}
+.card__img-container {
+  position: relative;
+}
+.card__img-icon {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  padding: 40%;
+  background-color: hsla(178deg, 100%, 50%, 0.5);
+  opacity: 0;
+  transition: 250ms opacity ease-in-out;
+}
+.card__img-icon:is(:hover, :focus) {
+  cursor: pointer;
+  opacity: 1;
+}
+.card__price-section {
+  display: flex;
+  justify-content: space-between;
+}
+.card__price {
+  font-weight: 600;
+  position: relative;
+  margin-left: 1em;
+}
+.card__price::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 12px;
+  height: 18px;
+  background-image: url("../../images/icon-ethereum.svg");
+  background-repeat: no-repeat;
+  left: -16px;
+  top: 3px;
+}
+.card__countdown {
+  font-weight: 400;
+  position: relative;
+}
+.card__countdown::before {
+  content: url("../../images/icon-clock.svg");
+  position: absolute;
+  height: 100%;
+  top: 50%;
+  left: -1.45em;
+  transform: translateY(-40%);
+}
+
+.img-container {
+  background-color: hsl(178deg, 100%, 50%);
+  border-radius: 0.5rem;
+}
+
+.author {
+  margin-top: -6px;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  font-style: normal;
+}
+.author img {
+  border: 1px solid hsl(0deg, 0%, 100%);
+  border-radius: 4.5rem;
+  max-width: 12%;
+}
+.author a {
+  text-decoration: none;
+}
+
+hr {
+  width: 100%;
+  color: hsl(215deg, 32%, 27%);
+  margin-top: 0;
+}
+
+.clr-primary-blue {
+  color: hsl(215deg, 51%, 70%);
+}
+
+.bg-primary-blue {
+  background-color: hsl(215deg, 51%, 70%);
+}
+
+.clr-primary-cyan {
+  color: hsl(178deg, 100%, 50%);
+}
+
+.bg-primary-cyan {
+  background-color: hsl(178deg, 100%, 50%);
+}
+
+.clr-primary-cyan-transparent {
+  color: hsla(178deg, 100%, 50%, 0.5);
+}
+
+.bg-primary-cyan-transparent {
+  background-color: hsla(178deg, 100%, 50%, 0.5);
+}
+
+.clr-neutral-100 {
+  color: hsl(0deg, 0%, 100%);
+}
+
+.bg-neutral-100 {
+  background-color: hsl(0deg, 0%, 100%);
+}
+
+.clr-neutral-300 {
+  color: hsl(215deg, 32%, 27%);
+}
+
+.bg-neutral-300 {
+  background-color: hsl(215deg, 32%, 27%);
+}
+
+.clr-neutral-500 {
+  color: hsl(216deg, 50%, 16%);
+}
+
+.bg-neutral-500 {
+  background-color: hsl(216deg, 50%, 16%);
+}
+
+.clr-neutral-700 {
+  color: hsl(217deg, 54%, 11%);
+}
+
+.bg-neutral-700 {
+  background-color: hsl(217deg, 54%, 11%);
+}/*# sourceMappingURL=style.css.map */

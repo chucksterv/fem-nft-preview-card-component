@@ -1,0 +1,9 @@
+@use "../abstracts/" as *;
+//Explored but unused within this project
+//The thought process was to make the image transparent while being hovered over.
+//This would create more work as the icon would need to be added separately.
+//Also the edges did not align properly even though both elements had the same border radius.
+.img-container {
+  background-color: clr(primary, "cyan");
+  border-radius: 0.5rem;
+}

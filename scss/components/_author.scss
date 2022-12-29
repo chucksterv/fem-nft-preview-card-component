@@ -1,0 +1,18 @@
+@use "../abstracts/" as *;
+
+.author {
+  margin-top: -6px;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  font-style: normal;
+
+  img {
+    border: 1px solid clr(neutral, 100);
+    border-radius: 4.5rem;
+    max-width: 12%;
+  }
+  a {
+    text-decoration: none;
+  }
+}

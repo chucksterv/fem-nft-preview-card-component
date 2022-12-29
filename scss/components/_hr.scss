@@ -1,0 +1,7 @@
+@use "../abstracts/" as *;
+
+hr {
+  width: 100%;
+  color: clr(neutral, 300);
+  margin-top: 0;
+}

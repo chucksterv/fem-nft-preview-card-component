@@ -1,0 +1,15 @@
+@use "../abstracts/" as *;
+
+body {
+  font-family: $ff-regular;
+  font-size: $fs-regular-mobile;
+  font-weight: $fw-light;
+}
+
+h1,
+h1 a {
+  color: clr(neutral, 100);
+  font-weight: $fw-bold;
+  font-size: $fs-heading;
+  text-decoration: none;
+}

@@ -1,0 +1,16 @@
+@use "../abstracts/" as *;
+
+body {
+  background-color: clr(neutral, 700);
+  color: clr(primary, "blue");
+  display: grid;
+  place-content: center;
+}
+
+a {
+  text-decoration: none;
+  transition: 250ms color ease-in-out;
+  &:hover {
+    color: clr(primary, "cyan");
+  }
+}
